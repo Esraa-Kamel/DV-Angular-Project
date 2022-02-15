@@ -1,0 +1,9 @@
+.accordion-button::after {
+  margin-right: 70%;
+}
+.acBTN::after {
+  margin-right: 65%;
+}
+mat-slider {
+  width: 300px;
+}

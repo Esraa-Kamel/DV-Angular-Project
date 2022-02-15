@@ -1,0 +1,32 @@
+
+
+  <div class="m-3" style="direction: rtl;">
+    <p style="color: #4E797F; font-size: 32px; font-family: 'system-ui';">تسوق بالأقسام</p>
+  </div>
+
+<div class="content-section implementation carousel-demo">
+  <div class="card pt-2">
+      <p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="11" [numScroll]="1"
+      [circular]="true" [autoplayInterval]="0" [responsiveOptions]="responsiveOptions">
+      <ng-template let-product pTemplate="product">
+        
+            <div class="item card">
+              <div style="text-align: center;">
+                <button style="background-color: #ffff; border: none; border-radius: 10px; height: 100%;" class="p-1" (click)="OnClick(product.id)">
+                  <div style="height: 70%; margin: 0 auto; text-align: center;">
+                    <img src="{{product.iconUri}}" width="60%" height="40px" alt="">
+                  </div>
+                  
+                  <div style="height: 30%;">
+                    <span style="font-size:12px; color: #2A2A2A; font-weight: bold;">{{product.name}}</span>
+                    <span style="display: none;">{{product.id}}</span>
+                  </div>
+                  
+                  </button>
+              </div>
+            </div>
+          </ng-template>
+      </p-carousel>
+  </div>
+</div>
+

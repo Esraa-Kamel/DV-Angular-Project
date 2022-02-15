@@ -1,0 +1,60 @@
+  <!--================Login Box Area =================-->
+	<section style="background-image: url('../../../../assets/img/bg.png');">
+		<app-header></app-header>
+		<div class="container">
+			<div class="row justify-content-center">
+				
+				<div class="col-lg-6">
+					<div style="direction: rtl;  padding: 0% 10% 3% 0%;">
+							
+						<h3 style="font-family: Helvetica; font-size: 30px; color: #2A2A2A; padding: 20px 0;">تسجيل الدخول</h3>
+
+								<form [formGroup]="loginForm" class="row login_form" (ngSubmit)="onSubmit()">	
+						
+
+							<div class="col-lg-10 col-md-10 col-sm-10 col-10 form-group" style="height: 56px;">
+								<div class="input-group">
+									<div class="input-group-addon">
+										<i class="fa fa-phone p-2"></i>
+									</div>	
+								<input type="text" formControlName="phoneNumber" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="رقم الجوال" onfocus="this.placeholder = ''" onblur="this.placeholder = 'رقم الجوال'" maxlength="10">
+							</div>
+							</div>
+
+							<div class="col-lg-10 col-md-10 col-sm-10 col-10 form-group" style="height: 56px;">
+								<div class="input-group">
+									<div class="input-group-addon">
+								 		<i class="fa fa-lock p-2"></i> 
+									</div>	
+								<input type="password" formControlName="password" class="form-control" id="password" name="password" placeholder="كلمة المرور" onfocus="this.placeholder = ''" onblur="this.placeholder = 'كلمة المرور'">
+							</div>
+							</div>
+
+							<div class="col-lg-10 col-md-10 col-sm-10 col-10" style="height: 56px; text-align: left;">
+								<a [routerLink]="['/Login/resetPassword']" style=" color:#8d8d8d; text-align: start; text-decoration: none; font-size: 15px;" onMouseOver="this.style.color='#333333'"
+								onMouseOut="this.style.color='#8d8d8d'">هل نسيت كلمة السر؟</a>
+							</div>
+							<div class="col-lg-10 col-md-10 col-sm-10 col-10 form-group" style="height: 56px;">
+									<button type="submit" value="submit" class="btn" style="background-color: #4EB77C; width: 100% ; height: 70%; color: #FFFFFF;" [disabled]="!loginForm.valid">تسجيل الدخول</button>
+							</div>
+							<div class="col-lg-10 col-md-10 col-sm-10 col-10" style="height: 56px; color: #434343; font-size: 15px; text-align: center;">
+								<p>ليس لديك حساب؟ <a [routerLink]="['/Login/register']" style="color:#4EB77C;text-decoration: none;">إنشاء حساب</a></p>
+								<p style="font-size: 13px;">بتسجيل الدخول فأنك توافق علي شروط الاستخدام</p>
+							</div>
+							
+						</form>
+					</div>
+				</div>
+				<div class="col-lg-5" style="text-align: center; margin-top: 12%;" id="Asset1">
+					<button type="button" class="mb-3 p-3" style="background-color: whitesmoke; border-radius: 15px; border-color: #1D4D4F; width: 80% ; color: #1D4D4F; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #2F6264;" [routerLink]="['/Login']"><h4>تسجيل الدخول</h4><p>إذا كان لديك حساب</p></button>
+
+					<button type="button" class="p-3" style="background-color: whitesmoke; border-radius: 15px; border-color: #bebebe; width: 80% ; color: #1D4D4F;" [routerLink]="['/Login/register']"><h4>إنشاء حساب جديد</h4><p>اذا لم يكن لديك حساب ..فأنشئ حساب جديدا</p></button>
+			</div>
+
+
+
+			</div>
+		</div>
+
+	</section>
+	<!--================End Login Box Area =================-->

@@ -1,0 +1,106 @@
+<div style="background-color: #4E797F; color: #FFFFFF; text-align: center;">
+<p class="p-2 m-0"  style="direction: rtl;">لقد وصلت لنهاية الصفحة. أستكشف المزيد!</p>
+</div>
+<div>
+  <div class="content-section implementation carousel-demo">
+    <div class="card pt-2">
+        <p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1"
+        [circular]="true" [autoplayInterval]="5000" [responsiveOptions]="responsiveOptions">
+
+        
+        <ng-template let-product pTemplate="product" rows="2">
+          
+              <div class="item card">
+                <div style="text-align: center;">
+                  <button style="background-color: #ffff; border: none; border-radius: 10px; height: 100%;" class="p-1" (click)="OnClick(product.id)">
+                    <div style="height: 70%; margin: 0 auto; text-align: center;">
+                      <img src="{{product.iconUri}}" width="60%" height="40px" alt="">
+                    </div>
+                    
+                    <div style="height: 30%;">
+                      <span style="font-size:12px; color: #2A2A2A; font-weight: bold;">{{product.name}}</span>
+                      <span style="display: none;">{{product.id}}</span>
+                    </div>
+                    
+                    </button>
+                </div>
+              </div>
+            </ng-template>
+        </p-carousel>
+    </div>
+  </div>
+</div>
+<footer class="footer" style="background-color: #1D4D4F; direction: rtl;">
+  <div class="footer-area" style="padding: 3% 0%;">
+    <div class="container">
+      <div class="row section_gap">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div style="width: 110px; height: 110px; margin: 0 auto;" >
+            <img src="../../../../assets/img/logo.png" style="height: 100%; width: 100%;">
+          </div>
+          <div style="text-align: center; color: #FFFFFF; font-family: Roboto;">
+            <h3>Most5dm</h3>
+            <p style="font-family: 'system-ui'; margin-top: -15px">بيع وشراء كل مستعمل</p>
+          </div>
+        </div>
+       
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="single-footer-widget instafeed">
+            <ul class="list" style="list-style: none;">
+              <li><a href="#" class="nav-link" style="color: #FFFFFF;">تعرف علينا</a></li>
+              <li><a href="#" class="nav-link" style="color: #FFFFFF;">وظائف</a></li>
+              <li><a href="#" class="nav-link" style="color: #FFFFFF;">قواعد السلامة</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="single-footer-widget instafeed">
+            <ul class="list" style="list-style: none;">
+              <li><a href="#" class="nav-link" style="color: #FFFFFF;">الأسئلة الأكثر تداولاً</a></li>
+              <li><a href="#" class="nav-link" style="color: #FFFFFF;">شروط الأستخدام</a></li>
+              <li><a href="#" class="nav-link" style="color: #FFFFFF;">سياسة الخصوصية</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="single-footer-widget tp_widgets">
+            <div class="ml-40" style="text-align: left; color: #B4B4B4;">
+              <h4 class="footer_title" style="color: #FFFFFF;">تواصل معنا</h4>
+              <!-- <p class="sm-head">
+                <span class="fa fa-location-arrow"></span>
+                Head Office
+              </p>
+              <p>123, Main Street, Your City</p> -->
+
+              <p class="sm-head">
+                01026397077
+                <span class="fa fa-phone"></span>
+              </p>
+              
+              <p class="sm-head">
+                01026397077
+                <span class="fa fa-whatsapp"></span>
+              </p>
+
+              <p class="sm-head">
+                mosta5dm@gmail.com
+                <span class="fa fa-envelope"></span>
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom" style="background-color: #103B3D;">
+    <div class="container">
+      <div class="row d-flex">
+        <p class="col-lg-12 footer-text text-center pt-3" style="color: #B4B4B4;">
+          2022 &copy; All Rights Are Reservied</p>
+      </div>
+    </div>
+  </div>
+</footer>

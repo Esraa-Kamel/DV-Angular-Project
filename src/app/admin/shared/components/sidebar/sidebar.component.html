@@ -1,0 +1,65 @@
+<nav id="sidebar" style="direction: rtl;">
+    <!-- <button (click)="toggleSideBar()" type="button" id="sidebarCollapse" class="btn btn-info mr-2">
+        <span>X</span>
+    </button> -->
+    <!-- <a href="/" class="btn"><h4>Most5dem App</h4></a> -->
+    <ul class="list-unstyled components">
+        <li>
+            <a [routerLink]="['home']">أدمن بانل</a>
+        </li>
+        
+    </ul>
+
+    <ul class="list-unstyled">
+        
+        <li>
+            <a [routerLink]="['mainCategories']">الأقسام الرئيسية</a>
+        </li>
+        <li>
+            <a [routerLink]="['categories']">الأقسام الفرعية</a>
+        </li>
+        <li>
+            <a [routerLink]="['cities']">المدن</a>
+        </li>
+        <!-- <li>
+            <a [routerLink]="['districts']">Districts</a>
+        </li> -->
+                
+    </ul>
+    <hr>
+    <ul style="list-style: none;">
+        <li><span style="font-weight: bold;">السيارات و قطع الغيار</span>
+            <ul>
+                <li>
+                    <a [routerLink]="['carsBrands']">الفئات</a>
+                </li>
+                <!-- <li>
+                    <a [routerLink]="['carsFuelTypes']">Fuel Types</a>
+                </li>
+                <li>
+                    <a [routerLink]="['carsGearTypes']">Gear Types</a>
+                </li>
+                <li>
+                    <a [routerLink]="['carsPushTypes']">Push Types</a>
+                </li> -->
+            </ul>
+        </li>
+        <li><span style="font-weight: bold;">الموبايلات و التابلت</span>
+            <ul>
+                <li>
+                    <a [routerLink]="['mobilePhonesBrands']">الفئات</a>
+                </li>
+            </ul>
+        </li>
+        <!-- <li>Home Application
+            <ul>
+                <li>
+                    <a [routerLink]="['/admin/carsBrands']">Types</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/admin/carsBrands']">Brands</a>
+                </li>               
+            </ul>
+        </li> -->
+    </ul>
+</nav>

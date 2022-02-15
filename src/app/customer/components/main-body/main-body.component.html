@@ -1,0 +1,47 @@
+
+<app-main-slider></app-main-slider>
+  <app-categories-list></app-categories-list>
+
+<div class="container" style="font-family: system-ui;">
+  <div class="row mt-3 mb-3">
+    <div class="col-lg-2" style="background-color: #FFFFFF;">
+      <app-filter-component></app-filter-component>
+
+    </div>
+    <div class="col-lg-10"  style="direction: rtl;">
+      
+  <div class="row p-4 m-2" style="background-color: #EDF3F0; box-shadow: 3px 3px 10px #00000029;"  *ngFor='let mainCatli of mainCatList'>
+    <div class="col-12">
+      <p style="font-size: 24px; color: #272727; display: inline-block;">{{mainCatli.name}}</p>
+      <span style="display: none;">{{mainCatli.id}}</span>
+      <button style="float: left;" class="btn btn-secondary">
+        عرض الكل
+      </button>
+    </div>
+    <div class="card col-lg-3" style="background-color: transparent; border: none;" *ngFor='let prodli of mainCatli.Products ' >
+      <div style="background-color: #FFFFFF; border-radius: 15px;" *ngFor='let cityDatali of cityData'>
+        <img class="card-img-top" src="{{prodli.iconUri}}" alt="Card image cap">
+        <div class="card-body" *ngFor="let brandDatali of brandData">
+          <h5 class="card-title">{{prodli.name}}</h5>
+          <h5 class="card-title">{{prodli.price}}</h5>
+          <h5 class="card-title">{{prodli.cityId}}</h5>
+          <h5 class="card-title">{{cityDatali.name}}</h5>
+          <h5 class="card-title">{{prodli.brandId}}</h5>
+          <h5 class="card-title">{{brandDatali.name}}</h5>
+        </div>
+        <div class="card-body text-center">
+          <a href="#" class="card-link m-2"><i class="fa fa-gratipay" style="color: #1D4D4F;"></i></a>
+          <a href="#" class="card-link m-2"><i class="fa fa-phone" style="color: #1D4D4F;"></i></a>
+          <a href="#" class="card-link m-2"><i class="fa fa-share" style="color: #1D4D4F;"></i></a>
+        </div>
+      </div>         
+    </div>
+   </div>      
+</div>
+
+     
+  </div>
+</div>
+
+   
+

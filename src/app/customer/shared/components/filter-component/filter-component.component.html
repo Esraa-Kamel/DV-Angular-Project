@@ -1,0 +1,67 @@
+
+  <p style="font-size: 20px; margin-top: 8px; font-weight: bold; color:#1D4D4F; text-align: right;">تصفيه النتائج</p>
+  <a role="button"><p style="color: red; font-size: 12px; font-weight: bold;">مسح عوامل التصفية</p></a>
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item" style="direction: rtl;">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color: whitesmoke;">
+          قسم
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body" style="padding: 0;">
+
+
+          <!-- <div style="border: solid 1px #F3F3F3; box-shadow: 3px 3px 3px #00000029;">
+            <form action="/action_page.php">
+              <button type="submit" style="border:none; width:5%; padding: 2%; background-color: transparent;"><i class="fa fa-search" style="color: #34A867;"></i></button>
+              <input type="text" style="direction: rtl; outline: none; border:none; width: 95%; padding: 1.5% 0; background-color: transparent;" placeholder="البحث عن قسم ..." name="search">
+            </form>
+          </div> -->
+  
+  
+  
+            <ul style="list-style: none; direction: rtl; padding: 0; margin: 5px 5px 5px;" *ngFor='let mainCatFilterli of mainCatFilterList'>
+              <li><input type="checkbox" value="{{mainCatFilterli.id}}" (select)="CBMainCatonChecked(mainCatFilterli.id)">&nbsp;{{mainCatFilterli.name}}</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo" style="direction: rtl;">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="background-color: whitesmoke;">
+          سعر
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <!-- <mat-slider aria-label="unit(s)"></mat-slider> -->
+          <input type="range" 
+               min="0" 
+               max="1000"
+               numeric>
+               <input type="range" 
+               min="0" 
+               max="1000"
+               numeric> 
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item" style="direction: rtl;">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button acBTN collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="background-color: whitesmoke;">
+          مدينة
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body" style="padding: 0;">
+          <ul style="list-style: none; direction: rtl; padding: 0; margin: 5px 5px 5px;" *ngFor='let cityli of cityList'>
+            <li><input type="checkbox" value="{{cityli.id}}" (change)="CBCityChecked(cityli.id)">&nbsp;{{cityli.name}}</li>
+          </ul>
+      </div>
+      </div>
+    </div>
+    <div class="m-2">
+      <button class="btn btn-info">بحث</button>
+    </div>
+  </div>

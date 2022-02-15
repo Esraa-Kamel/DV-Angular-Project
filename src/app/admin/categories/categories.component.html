@@ -1,0 +1,57 @@
+<div class="container">
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-success" (click)="openDialog()">
+  إضافة جديد
+</button>
+    <div class="row">
+        
+
+        <div class="col-md-12" style="direction: rtl;">
+          <h3 class="my-3">الأقسام الفرعية</h3>
+            
+            <!-- <a mat-flat-button color="accent" routerLink="/create"><mat-icon inline=true>Add New</mat-icon> Create</a> -->
+
+            <table class="table table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col" hidden>ID</th>
+                        <th scope="col" hidden>Main Category Id</th>
+                        <th scope="col">القسم الرئيسي</th>
+                        <th scope="col">القسم الفرعي</th>
+                        <th scope="col">الصورة</th>
+                        <th scope="col">حذف/تعديل</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let catli of catList; let i = index'>
+                        <th scope="row">{{i+1}}</th>
+                        <th scope="row" hidden>{{catli.id}}</th>
+                        <td hidden>{{catli.mainCategoryId}}</td>
+                        <td>{{catli.mainCategory.name}}</td>
+                        <td>{{catli.name}}</td>
+                        <td><img width="150px" height="150px" src="../../../assets/img/{{catli.iconUri}}" alt=""></td>
+                        <td>
+                            <a href="">
+                                
+                            </a>
+                            <button type="button" class="btn btn-primary" (click)="DelectCat(catli.id)">حذف</button>
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            <button type="button" class="btn btn-warning">تعديل</button>
+      
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+
+
+    </div>
+</div>

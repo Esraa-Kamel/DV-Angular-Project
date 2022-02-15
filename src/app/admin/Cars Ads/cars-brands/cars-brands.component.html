@@ -1,0 +1,39 @@
+<div class="container">
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+إضافة جديد</button>
+  <div class="row">
+      <div class="col-md-12" style="direction: rtl;">
+          <h3 class="my-3">فئات السيارات و قطع الغيار</h3>
+          <table class="table table-bordered text-center">
+              <thead>
+                  <tr>
+                      <th scope="col">#</th>
+                      <th scope="col" hidden>ID</th>
+                      <th scope="col">القسم</th>                      
+                      <th scope="col">الفئة</th>                      
+                      <th scope="col" hidden>Category Id</th>                      
+                      <th scope="col">الصورة</th>
+                      <th scope="col">حذف/تعديل</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor='let carsBrdsLi of carsBrandsList; let i = index'>
+                  <th scope="row">{{i+1}}</th>
+                  <th scope="row" hidden>{{carsBrdsLi.id}}</th>
+                  <td>{{carsBrdsLi.category}}</td>
+                  <td>{{carsBrdsLi.name}}</td>
+                  <td hidden>{{carsBrdsLi.categoryId}}</td>
+                  <td>{{carsBrdsLi.iconUri}}</td>
+                  <td>
+                    <button type="button" class="btn btn-primary">حذف</button>
+                    <button type="button" class="btn btn-warning">تعديل</button>
+
+                     
+                  </td>
+              </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>

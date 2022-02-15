@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-fixed-top"  style="background-color: #4EB77C; direction: rtl;">
+  <button class="navbar-toggler mr-2 special" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="color: #FFFFFF;">
+    <span class="navbar-toggler-icon"><i class="fa fa-bars pt-2" style="color: #FFFFFF;"></i> </span>
+  </button>
+  <div class="d-md-flex d-block flex-row mx-md-auto mx-0">
+  <div class="collapse navbar-collapse container" id="navbarNav">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" style="border-left: 1px solid #FFFFFF; padding: 0px 20px;"><a class="nav-link" style="color: #FFFFFF;" [routerLink]="['']"><i class="fa fa-home"></i> الرئيسية</a></li>
+      <li class="nav-item" style="border-left: 1px solid #FFFFFF; padding: 0px 20px;"><a class="nav-link" style="color: #FFFFFF;" [routerLink]="['/']"><i class="fa fa-heart"></i> المفضلة</a></li>
+      <li class="nav-item" style="border-left: 1px solid #FFFFFF; padding: 0px 20px;"><a style="color: #FFFFFF;" class="nav-link"><i class="fa fa-question-circle"></i> المساعدة</a></li>
+      <li class="nav-item" style="border-left: 1px solid #FFFFFF; padding: 0px 20px;"><a style="color: #FFFFFF;" class="nav-link"><i class="fa fa-map-marker"></i> المملكة العربية السعودية</a></li>
+      <li class="nav-item" style="border-left: 1px solid #FFFFFF; padding: 0px 20px;"><a style="color: #FFFFFF;" class="nav-link" [routerLink]="['/Login/register']"><i class="fa fa-user"></i> أدخل لحسابك أو سجل الآن </a></li>
+      <li class="nav-item" style="padding: 0px 20px;"><a style="color: #FFFFFF;" class="nav-link"><i class="fa fa-globe"></i> English</a></li>
+    </ul>
+  </div>
+  </div>
+</nav>
+  <div class="row justify-content-center m-0">
+    <div class="col-lg-2 pt-3" style="text-align: center;">
+<button style="background-color: #4EB77C; border: none; border-radius: 10px; margin-right: 5px; width: 70px;" class="p-1">
+  <i class="fa fa-arrow-circle-up" style="color: white;"></i>
+  <br>
+  <span style="font-size:12px; color: white; font-weight: bold;">إعلاناتي</span>
+</button>
+<button style="background-color: #4EB77C; border: none; border-radius: 10px;  width: 70px;" class="p-1" [routerLink]="['/addAds']">
+  <i class="fa fa-plus" style="color: white;"></i>
+  <br>
+  <span style="font-size:12px; color: white; font-weight: bold;">إضافة إعلان</span>
+</button>
+    </div>
+    <div class="col-lg-7" style="border: solid 1px #b1b1b1; border-radius:15px; max-height: 50px; margin-top: 20px;">
+      <form action="/action_page.php">
+        <button type="button" (click)="openDialog()" style="border:none; width:5%; padding: 1.5% 0; background-color: transparent;"><i class="fa fa-search" style="color: #34A867; font-size: 25px;"></i></button>
+        <input type="text" style="direction: rtl; outline: none; border:none; width: 95%; padding: 1.5% 0; background-color: transparent;" placeholder="البحث" name="search">
+      </form>
+    </div>
+    <div class="col-lg-1 col-md-6 col-sm-6 pt-2" style="text-align: right;">
+      <div style="width: 70px; height: 70px; display: inline-block;">
+        <a [routerLink]="['']"><img src="../../../../assets/img/logo.png" style="height: 100%; width: 100%;"></a>
+      </div>
+      
+    </div>
+    <div class="col-lg-2 col-md-6 col-sm-6" style="margin-top: 20px;">
+      <a [routerLink]="['']"><div style="text-align: center; color: #1D4D4F; font-family: system-ui; display: inline-block;">
+        <h3>Most<span style="color: #04995F;">5</span>dm</h3>
+        <p style="font-family: 'system-ui'; margin-top: -15px">بيع وشراء كل مستعمل</p>
+      </div></a>
+    </div>
+  </div>
+  
